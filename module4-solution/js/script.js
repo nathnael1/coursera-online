@@ -1,31 +1,27 @@
+//script.js i combine both hellospeaker and bye speaker with one script folder
 (function(){
 
 	var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
 	
 	var hellospeaker= {};
-	hellospeaker.speakword = "Hello";
 	hellospeaker.speak=	function(name) {
-  console.log(hellospeaker.speakword + " " + name);
+  console.log( "Hello " + name);
 }
 	
 	
 	var byespeaker={};
-	byespeaker.speakword = "Good Bye";
 	byespeaker.speak= 	function(name) {
-  console.log(byespeaker.speakword + " " + name);
+  console.log( "Good Bye " + name);
 }
-	
-
-
-	
 	for (var i = 0; i < names.length; i++) {
 
 
 		var firstLetter = names[i].charAt(0).toLowerCase();
 				  if (firstLetter === 'j'){
-   console.log(hellospeaker.speak(names[i]));
+				  	byespeaker.speak(names[i]);
+   
   } else {
-    console.log(byespeaker.speak(names[i]));
+    hellospeaker.speak(names[i]);
   }
 
   
